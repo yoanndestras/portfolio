@@ -1,0 +1,229 @@
+body
+{
+    font-family: 'VT323', monospace;
+    width: 100%;
+    background-color: #6767FF;
+}
+
+header
+{
+    text-align: center;
+}
+
+.btn-group button 
+{
+    background-color: #04AA6D; 
+    border: 1px solid green; 
+    color: white;
+    padding: 10px 24px; 
+    cursor: pointer; 
+    
+    margin-bottom: 10px;
+    width: 140px;
+    
+}
+.btn-index
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    height: 100%;
+}
+.btn-index div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.btn-index div button
+{
+    margin-top: 100%;
+    padding: 24px 24px; 
+    background-color: transparent;
+    border: none;
+
+    height: 120px;
+    width: 120px;
+
+    background-image: url("../img/cube_mario-nobg.png");
+    background-size: cover;
+    object-fit: contain;
+
+    color: black;
+}
+
+
+.btn-index button:hover 
+{
+    background-color: transparent !important;
+}
+.jump
+{
+    filter: saturate(5);
+}
+.reverse
+{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.btn-group button:hover 
+{
+    background-color: #3e8e41;
+}
+
+.fa-dog
+{
+    color: white;
+    font-size: 600%;
+    
+    
+}
+.animate
+{
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 2s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+main
+{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#game
+{
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+/*
+#pet
+{
+    position: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    bottom: 0px;
+
+    color: white;
+    font-size: 600%;
+}
+*/
+#pet_1
+{
+    position: absolute;
+
+    
+    left: 0;
+    right: 0;
+
+    bottom: 0px;
+
+    color: white;
+    font-size: 600%;
+}
+
+#game_screen
+{
+    background-image: url(../img/screen_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    object-position: top;
+    object-fit: cover;
+
+    border-radius: 10px;
+    height: 500px;
+}
+#cv
+{
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 10px;
+    
+    position: relative;
+    
+    background-color: white;
+
+    background-image: url(../img/screen_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    object-position: top;
+    object-fit: cover;
+}
+
+#scroll_display
+{
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.text_left
+{
+    width: 40%;
+}
+.text_right
+{
+    width: 50%;
+}
+
+.parcours
+{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: white;
+
+    text-align: left;
+
+    margin-bottom: 20px;
+
+    -moz-box-shadow:     0 0 10px #000000;
+    -webkit-box-shadow:  0 0 10px #000000;
+    box-shadow:          0 0 10px #000000;
+}
+
+.parcours div
+{
+    margin :10px;
+}
+
+span
+{
+    color: blue;
+    font-size: 1.5em;
+}
+
+footer ul
+{
+    padding-bottom: 20px;
+    padding-top: 25px;
+    margin-bottom: 0;
+
+    background-color: #0505F2;
+    color: white;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
