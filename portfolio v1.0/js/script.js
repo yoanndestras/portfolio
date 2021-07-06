@@ -204,5 +204,4 @@ function Fell()
         pos.style.top = parseInt(pos.style.top) + 80 + 'px';
     }
 
-
 window.onload = init;

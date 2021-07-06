@@ -1,15 +1,42 @@
 body
 {
-    font-family: 'VT323', monospace;
+    font-family: 'Press Start 2P', cursive;
+    font-size: small;
     width: 100%;
-    background-color: #6767FF;
+    background-image: url(../img/FOND1.jpg);
+    object-fit: contain;
+    object-position: top;
 }
 
 header
 {
     text-align: center;
 }
+h2
+{
+    color: white;
+    font-size: 3em;
+}
 
+#scroll_display::-webkit-scrollbar {
+    width: 20px; 
+    
+  }
+  
+#scroll_display::-webkit-scrollbar-track {
+    background: none;
+    
+  }
+
+#scroll_display::-webkit-scrollbar-thumb {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,88,253,1) 100%);
+
+    border-radius: 10px;
+    -moz-box-shadow:    inset 0 0 5px #000000;
+   -webkit-box-shadow: inset 0 0 5px #000000;
+   box-shadow:         inset 0 0 5px #000000;
+  }
 .btn-group button 
 {
     background-color: #04AA6D; 
@@ -53,7 +80,6 @@ header
     color: black;
 }
 
-
 .btn-index button:hover 
 {
     background-color: transparent !important;
@@ -77,8 +103,6 @@ header
 {
     color: white;
     font-size: 600%;
-    
-    
 }
 .animate
 {
@@ -95,7 +119,15 @@ header
 }
 main
 {
-    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#cv_main
+{
+    width: 1312px;
+    display: flex;
+    flex-direction: row;
     text-align: center;
     margin: 0 auto;
 }
@@ -103,7 +135,7 @@ main
 #game
 {
     margin: 0 auto;
-    width: 100%;
+    width: 900px;
     position: relative;
 }
 /*
@@ -139,34 +171,73 @@ main
 
 #game_screen
 {
-    background-image: url(../img/screen_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    object-position: top;
-    object-fit: cover;
+    
+    
 
     border-radius: 10px;
     height: 500px;
 }
+#command_button button
+{
+    cursor: pointer;
+
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(123,24,168,1) 100%);
+    color: white;
+    border: none;
+}
+#redirect_button button
+{
+    cursor: pointer;
+
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+    background: rgb(63,234,251);
+    background: radial-gradient(circle, rgba(63,234,251,1) 0%, rgba(158,70,252,1) 100%);
+    color: white;
+    border: none;
+}
 #cv
 {
     margin: 0 auto;
-    width: 100%;
+    width: 900px;
     border-radius: 10px;
     
     position: relative;
     
-    background-color: white;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,88,253,1) 100%);
 
-    background-image: url(../img/screen_bg.png);
+    /*background-image: url(../img/screen_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     object-position: top;
-    object-fit: cover;
+    object-fit: cover;*/
 }
+#cv_download
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
 
+    cursor: pointer;
+
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(123,24,168,1) 100%);
+    color: white;
+    border: none;
+}
 #scroll_display
 {
     height: 500px;
