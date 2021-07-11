@@ -15,8 +15,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
         
 <!-- JS -->
-  		<script src="js/script.js"></script>
         <script src="https://kit.fontawesome.com/ef488c0f83.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -44,7 +44,7 @@
         <section id="description">
         <img src="img/avatar_yoann.png">
         <div>
-            <p id="description_p">Bonjour et bienvenue sur mon portfolio je m'appelle Yoann Destras et je suis développeur web full stack</p>
+            <p id="description_p">Bonjour et bienvenue sur mon portfolio je m'appelle Yoann Destras et je suis développeur web</p>
         </div>
         </section>
 
@@ -252,79 +252,64 @@
             <h2 id="h2_img"><img src="img/arrow.PNG">Mes réalisations</h2>
         </div>
         <article>
-            <div class="projets" data-aos="fade-right" data-aos-duration="1500">
-                <i class="fas fa-briefcase pokeball"></i>
-                <div class="text_left">
-                    <p>
-                        <span>
-                            Projet fil rouge
-                        </span><br>
-                    </p>
+            <div id="projet_1" class="projets" data-aos="fade-right" data-aos-duration="1500">
+                <div id="pokeballs">
+                    <a href="https://github.com/yoanndestras/MelismeKIDS">
+                        <img class="pokeball" src="img/pokemon_frame1.png">
+                        <img class="pokeball2" src="img/pokemon_frame2.png">
+                    </a>
+                    
                 </div>
-                <div class="text_right">
-                    <br>
-                    <p>
-                        Ce projet de formation est parti de l’idée de faire un site d’apprentissage de musique pour tous les âges et niveaux.<br><br>
-                        Il est composé de deux parties distinctes, “melisme” (par défaut) et "kids"(destiné aux enfants).<br><br>
-                        Ma partie du projet est "kids" incluant des jeux ludiques.
+                <div class="projet_text" id="projet_text_1">
+                    <p class="projet_img">
+                        <img src="img/click.png"><br>
+                        <span>Vers Github</span>
                     </p>
-                    <a href="https://github.com/yoanndestras/MelismeKIDS">Lien vers Github</a>
                 </div>
             </div>
             
-            <div class="projets" data-aos="fade-left" data-aos-duration="1500">
-                <i class="fas fa-briefcase pokeball"></i>
-                <div class="text_left">
-                    <p>
-                        <span>
-                            Site e-Commerce
-                        </span><br>
-                    </p>
+            <div id="projet_2" class="projets" data-aos="fade-left" data-aos-duration="1500">
+                <div id="pokeballs">
+                    <a href="https://github.com/yoanndestras/site-ecommerce">
+                        <img class="pokeball" src="img/pokemon_frame1.png">
+                        <img class="pokeball2" src="img/pokemon_frame2.png">
+                    </a>
                 </div>
-                <div class="text_right">
-                    <br><br>
-                    <p>
-                        Mini-projet de site e-Commerce, concluant l'apprentissage des bases en PHP.<br><br>
-                        Le site permet de commander à manger des plats vietnamiens ou réserver une table au restaurant "Made in Vietnam".<br><br>
-                        Intégration d'une interface administrateur.
+                <div class="projet_text" style="color: black;">
+                    <p class="projet_img">
+                        <img src="img/click.png"><br>
+                        <span style="color: black;">Vers Github</span>
                     </p>
-                    <a href="https://github.com/yoanndestras/site-ecommerce">Lien vers Github</a>
                 </div>
             </div>
             
-            <div class="projets" data-aos="fade-right" data-aos-duration="1500">
-                <i class="fas fa-briefcase pokeball"></i>
-                <div class="text_left">
-                    <p>
-                        <span>
-                            Blog
-                        </span><br>
-                    </p>
+            <div id="projet_3" class="projets" data-aos="fade-right" data-aos-duration="1500">
+                <div id="pokeballs">
+                    <a href="https://github.com/yoanndestras/blog_bodybuilding">
+                        <img class="pokeball" src="img/pokemon_frame1.png">
+                        <img class="pokeball2" src="img/pokemon_frame2.png">
+                    </a>
                 </div>
-                <div class="text_right">
-                    <br><br>
-                    <p>
-                        Blog permettant la publication d'article sur la musculation par les administrateurs du site, et la possibilité de laisser des commentaires.
+                <div class="projet_text">
+                    <p class="projet_img">
+                        <img src="img/click.png"><br>
+                        <span>Vers Github</span>
                     </p>
-                    <a href="https://github.com/yoanndestras/blog_bodybuilding">Lien vers Github</a>
                 </div>
             </div>
             
-            <div class="projets" data-aos="fade-left" data-aos-duration="1500">
-                <i class="fas fa-briefcase pokeball"></i>
-                <div class="text_left">
-                    <p>     
-                        <span>
-                            Site réservation front
-                        </span><br>
-                    </p>
+            <div id="projet_4" class="projets" data-aos="fade-left" data-aos-duration="1500">
+                <div id="pokeballs">
+                    <a href="https://yoanndestras.github.io/Reservia/">
+                        <img class="pokeball" src="img/pokemon_frame1.png">
+                        <img class="pokeball2" src="img/pokemon_frame2.png">
+                    </a>
                 </div>
-                <div class="text_right">
-                    <br><br>
-                    <p>
-                        Mini-projet front-end d'un site de réservation type booking, version responsive fonctionnelle.
+                <div class="projet_text" style="color: black;">
+                    <p class="projet_img">
+                        <img src="img/click.png"><br>
+                        <span style="color: black;">Vers Github</span>
                     </p>
-                    <a href="https://yoanndestras.github.io/Reservia/">Lien vers Github</a>
                 </div>
             </div>   
         </article>

@@ -12,6 +12,7 @@ body
     background-repeat: no-repeat;
     background-attachment: fixed;
 
+    scroll-behavior: smooth !important;
 }
 
 header
@@ -20,15 +21,12 @@ header
     width: 100%;
 }
 
-
-
 /*******************************************LOGO NAME**************************************************/
 
 #logo_and_name
 {
     width: 25%;
 }
-
 #img_male
 {
     width: 15px;
@@ -93,9 +91,7 @@ nav ol a
     padding: 10px 5px 10px 5px;
     border: solid 5px #2068D0;
     border-radius: 2px;
-
     margin-top: 100px;
-
     -webkit-box-shadow: 0px 0px 0px 2px #000000; 
     box-shadow: 0px 0px 0px 2px #000000;
 }
@@ -130,7 +126,6 @@ nav ol a
 }
 
 /*******************************************MAIN**************************************************/
-
 
 main
 {
@@ -201,13 +196,12 @@ h2
     box-shadow: 0px 0px 0px 2px #000000;
 }
 
+
 .parcours, .projets
 {
     color: #ffffff;
     /*border: #506860 solid 7px;*/
     font-size: 0.8em;
-    border-radius: 20px;
-    padding: 60px 5px 10px 40px;
     margin: 10px;
     position: relative;
     width: 40%;
@@ -218,14 +212,56 @@ h2
     background-color:#0190EE ;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+.projets
+{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;    
+}
+.projet_img
+{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.projet_img img
+{
+    width: 10%;
+    margin: 0 20px 20px 20px;
+}
+#projet_1
+{
+    background-image: url("../img/Melisme_kids.PNG");
+}
+#projet_2
+{
+    background-image: url("../img/Made_in_vietnam.PNG");
+}
+#projet_3
+{
+    background-image: url("../img/blog.PNG");
+}
+#projet_4
+{
+    background-image: url("../img/reservia.PNG");
+}
 .parcours:hover, .projets:hover
 {
     box-shadow: none;
 }
-.text_right a
+.projet_text span
 {
     text-decoration: none;
     color: #ffffff;
+}
+.projet_text
+{
+    position: absolute;
+    top: 50%;
+    width: 100%;
 }
 #section_real, #section_cv
 {
@@ -271,15 +307,51 @@ h2
 {
     margin-top: 50px;
 }
-.pokeball
+#pokeballs
+{
+    margin: 0;
+    cursor: pointer;
+}
+
+#pokeballs + div
+{
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.opacity_0
+{
+    opacity: 0;
+}
+.opacity_1
+{
+    opacity: 1;
+    top: 30%;
+}
+.pokeball, .pokeball2
 {
     position: absolute;
-    top: 0px;
-    font-size: 10em;
-    background: rgb(176,64,0);
-    background: linear-gradient(180deg, rgba(176,64,0,1) 50%, rgba(230,240,243,1) 50%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 20%;
+}
+.pokeball2
+{
+    display: none;
+}
+#pokeballs:hover img:last-child
+{
+    display: block;
+}
+#pokeballs:hover img:first-child
+{
+    display: none;
 }
 
 .text_left p:first-child
@@ -311,7 +383,6 @@ h2
     
 }
 /*******************************************FOOTER**************************************************/
-
 
 footer ul
 {
