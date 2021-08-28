@@ -6,7 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   	<title>Yoann Destras</title>
-    <link rel="shortcut icon" href="img/logoyoann2_censored.jpg" />
+    <link rel="shortcut icon" href="img/logoyoann2_censored.jpg" alt="logo_y" />
+
+<!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <!-- CSS -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -21,114 +25,231 @@
 
 </head>
 <body>
+    <div class="bg_image"></div>
     <header>
-        <nav>
-            <ol>
-                <a href="#section_comp"><li class="link" id="link_comp"><img src="img/arrow.PNG" id="img_comp">Mes compétences</li></a>
-                <a href="#section_real"><li class="link" id="link_real"><img src="img/arrow.PNG" id="img_real">Mes réalisations</li></a>
-                <a href="#section_contact"><li class="link" id="link_contact"><img src="img/arrow.PNG" id="img_contact">Me contacter</li></a>
-                <div id="logo_and_name">
-                    <div>
-                        <img id="logo_y" src="img/logoyoann2_censored.jpg">
+        <section id="pc_navbar">
+            <nav>
+                <ol>
+                    <a href="#section_comp"><li class="link" id="link_comp"><img src="img/arrow.PNG" alt="fleche" id="img_comp">Mes compétences</li></a>
+                    <a href="#section_real"><li class="link" id="link_real"><img src="img/arrow.PNG" alt="fleche" id="img_real">Mes réalisations</li></a>
+                    <a href="#section_contact"><li class="link" id="link_contact"><img src="img/arrow.PNG" alt="fleche" id="img_contact">Me contacter</li></a>
+                    <a href="Yoann_Destras_CV.pdf" title="" target="_blank" download><li id="cv_download"><i class="fas fa-file-download"></i><br><br>C.V</li></a>
+                    <div id="logo_and_name">
+                        <div>
+                            <img class="logo_y" src="img/logoyoann2_censored.jpg" alt="logo_y">
+                        </div>
+                        <div id="header_name">
+                            <p>
+                                Yoann Destras <img src="img/male_sign.PNG" id="img_male" alt="logo_homme"><br> Développeur web junior
+                            </p>
+                        </div>
                     </div>
-                    <div id="header_name">
-                        <p>
-                            Yoann Destras <img src="img/male_sign.PNG" id="img_male"><br> Développeur web junior
-                        </p>
-                    </div>
+                </ol>
+            </nav>
+        </section>
+        <section id="responsive_navbar" style="display: none;">
+            <nav class="navbar navbar-light navbar-1 blue">
+                <a class="navbar-brand" id="mon_portfolio_title" href="#">Mon portfolio </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent10" aria-controls="navbarSupportedContent10"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class=""><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff"></i></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent10">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#section_comp">Mes compétences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#h2_real">Mes réalisations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section_contact">Me contacter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Yoann_Destras_CV.pdf"><i class="fas fa-file-download"></i> C.V</a>
+                        </li>
+                    </ul>
                 </div>
-            </ol>
-        </nav>
+            </nav>
+        </section>
     </header>
 
   	<main>
-        <section id="description">
-            <img src="img/avatar_yoann.png">
+        <div style="display: none;" id="logo_and_name_responsive">
             <div>
-                <p id="description_p">Bonjour et bienvenue sur mon portfolio je m'appelle Yoann Destras et je suis développeur web junior en recherche d'un contrat d'apprentissage sur Lille afin d'intégrer l'ESGI en 3ème Année en alternance Ingénierie du Web, année scolaire 2021-2022 (session d'Octobre).</p>
+                <img id="avatar_responsive" src="img/avatar_yoann_sans_contour.png" alt="avatar">
+                <img class="logo_y" src="img/logoyoann2_censored.jpg" alt="logo_y">
+            </div>
+            <div id="header_name">
+                <p>
+                    Yoann Destras <img src="img/male_sign.PNG" id="img_male" alt="logo_homme"><br> Développeur web junior
+                </p>
+            </div>
+        </div>
+        <section id="description">
+            <img src="img/avatar_yoann.png" alt="avatar">
+            <div>
+                <p id="description_p">Bonjour et bienvenue sur mon portfolio je m'appelle Yoann Destras et je suis développeur web junior en recherche d'un contrat d'apprentissage sur Lille pour intégrer l'ESGI en troisième année Bachelor Ingénierie du web (une semaine en cours / trois semaines en entreprise).</p>
             </div>
         </section>
 
         <section id="section_comp">
-            <div id="div_titre_section" data-aos="fade-up">
-                <h2 id="h2_img"><img src="img/arrow.PNG">Mes compétences &lt;/&gt;</h2>
+            <div class="div_titre_section" data-aos="fade-up">
+                <h2 class="h2_img"><img src="img/arrow.PNG" alt="fleche">Mes compétences <span id="fleches">&lt;/&gt;</span></h2>
             </div>
 
             <article class="comp"  data-aos="fade-up" data-aos-duration="1500">
                 <div id="comp_bulle">
-                    <img src="img/avatar_yoann_sans_contour.png">
+                    <img src="img/avatar_yoann_sans_contour.png" alt="avatar">
                     <div id="comps">
                         <div id="comp_une">
-                            <div class="progress_bar">
-                                <p>HTML</p>
-                                <div class="myProgress_1">
-                                    <div class="myBar_1"></div>
+                            <div>
+                                <div class="progress_bar">
+                                    <p>HTML</p>
+                                    <div class="myProgress">
+                                        <div class="myBar"></div>
+                                    </div>
+                                    <p>80 %</p>
                                 </div>
-                                <p>80 %</p>
+                                <div class="progress_bar_text">
+                                    <p>
+                                        Le langage HTML n'a presque plus de secrets pour moi, j'aime avoir une structure de balisage correcte, commentée et ordonnée.<br>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="progress_bar">
-                                <p>CSS</p>
-                                <div class="myProgress_2">
-                                    <div class="myBar_2"></div>
+                            
+                            <div>
+                                <div class="progress_bar">
+                                    <p>CSS</p>
+                                    <div class="myProgress">
+                                        <div class="myBar"></div>
+                                    </div>
+                                    <p>60 %</p>
                                 </div>
-                                <p>60 %</p>
+                                <div class="progress_bar_text">
+                                    <p>
+                                        Le langage CSS fait partit intégrante de chacuns de mes projets, je suis curieux d'en apprendre de plus en plus.<br>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="progress_bar">
-                                <p>Javascript/Ajax</p>
-                                <div class="myProgress_3">
-                                    <div class="myBar_3"></div>
+                            <div>
+                                <div class="progress_bar">
+                                    <p>Javascript</p>
+                                    <div class="myProgress">
+                                        <div class="myBar"></div>
+                                    </div>
+                                    <p>60 %</p>
                                 </div>
-                                <p>60 %</p>
+                                <div class="progress_bar_text">
+                                    <p>
+                                        Javascript est un langage que j'aime beaucoup utiliser afin de rendre un site web dynamique. J'ai encore une marge de progression importante sur ces langages.<br>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div id="comp_deux">
-                            <div class="progress_bar">
-                                <p>PHP</p>
-                                <div class="myProgress_4">
-                                    <div class="myBar_4"></div>
+                            <div>
+                                <div class="progress_bar">
+                                    <p>PHP</p>
+                                    <div class="myProgress">
+                                        <div class="myBar"></div>
+                                    </div>
+                                    <p>60 %</p>
                                 </div>
-                                <p>60 %</p>
-                            </div>
-                            <div class="progress_bar">
-                                <p>SQL</p>
-                                <div class="myProgress_5">
-                                    <div class="myBar_5"></div>
+                                <div class="progress_bar_text">
+                                    <p>
+                                        Grâce à PHP j'ai pu utiliser des requêtes de manipulation de données sur un site e-commerce par exemple.<br>
+                                    </p>
                                 </div>
-                                <p>50 %</p>
                             </div>
+                            
+                            <div>
+                                <div class="progress_bar">
+                                    <p>SQL</p>
+                                    <div class="myProgress">
+                                        <div class="myBar"></div>
+                                    </div>
+                                    <p>50 %</p>
+                                </div>
+                                <div class="progress_bar_text">
+                                    <p>
+                                        Avec phpMyAdmin, j'ai configuré des base de données avec le langage SQL, j'en posséde les bases.<br>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="progress_bar">
+                                    <p>Ajax</p>
+                                    <div class="myProgress">
+                                        <div class="myBar"></div>
+                                    </div>
+                                    <p>40 %</p>
+                                </div>
+                                <div class="progress_bar_text">
+                                    <p>
+                                        Ajax est une méthode de programmation que j'ai pu appliquer dans certains projets, je dois régulièrement l'utiliser et j'en intègre le fonctionnement.<br>
+                                    </p>
+                                </div>
+                            </div>
+                            
                         </div>
                         <div id="comp_trois">
-                            <div class="progress_bar">
-                                <p>Bootstrap</p>
-                                <div class="myProgress_6">
-                                    <div class="myBar_6"></div>
+                            <div>
+                                <div class="progress_bar">
+                                    <p>Bootstrap</p>
+                                    <div class="myProgress">
+                                        <div class="myBar"></div>
+                                    </div>
+                                    <p>60 %</p>
                                 </div>
-                                <p>60 %</p>
+                                <div class="progress_bar_text">
+                                    <p>
+                                        Le framework Bootstrap apporte un vrai gain de temps dans certains projets. Je peux encore progresser en rapidité dans son utilisation.<br>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="progress_bar">
-                                <p>JQuery</p>
-                                <div class="myProgress_7">
-                                    <div class="myBar_7"></div>
+                            
+                            <div>
+                                <div class="progress_bar">
+                                    <p>JQuery</p>
+                                    <div class="myProgress">
+                                        <div class="myBar"></div>
+                                    </div>
+                                    <p>50 %</p>
                                 </div>
-                                <p>50 %</p>
+                                <div class="progress_bar_text">
+                                    <p>
+                                        J'aime beaucoup utiliser JQuery sur un projet. C'est un très bon outil. Je suis de plus en plus à l'aise avec.<br>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="progress_bar">
-                                <p>Symfony</p>
-                                <div class="myProgress_8">
-                                    <div class="myBar_8"></div>
+                            
+                            <div>
+                                <div class="progress_bar">
+                                    <p>Symfony</p>
+                                    <div class="myProgress">
+                                        <div class="myBar"></div>
+                                    </div>
+                                    <p>40 %</p>
                                 </div>
-                                <p>20 %</p>
+                                <div class="progress_bar_text">
+                                    <p>
+                                        Débutant et en auto-formation sur le framework je découvre ses possibilités au fur et à mesure.<br>
+                                    </p>
+                                </div>
                             </div>
                         </div>
+    
                         <div id="tabs">
                             <button id="tab_one" class="tab_button">
-                                Langages Front end
+                               <span class="chiffres">Front</span> <span class="end">end</span><span class="chiffres_affiche">1</span>
                             </button>
                             <button id="tab_two" class="tab_button">
-                                Langages Back end
+                                <span class="chiffres">Back</span> <span class="end">end</span><span class="chiffres_affiche">2</span>
                             </button>
                             <button id="tab_three" class="tab_button">
-                                Frameworks
+                                <span class="chiffres">Framework</span><span class="chiffres_affiche">3</span>
                             </button>
                         </div>
                     </div>
@@ -137,21 +258,21 @@
         </section>
 
         <section id="section_real">
-            <div id="div_titre_section"  data-aos="fade-up">
-                <h2 id="h2_img"><img src="img/arrow.PNG">Mes réalisations</h2>
+            <div class="div_titre_section"  data-aos="fade-up">
+                <h2 class="h2_img" id="h2_real"><img src="img/arrow.PNG" alt="fleche">Mes réalisations</h2>
             </div>
             <article>
                 <div id="projet_1" class="projets" data-aos="fade-right" data-aos-duration="1500">
                     <div class="pokeballs">
                         <a href="https://github.com/yoanndestras/MelismeKIDS" target="_blank">
-                            <img class="pokeball" src="img/pokemon_frame1.png">
-                            <img class="pokeball2" src="img/pokemon_frame2.png">
+                            <img class="malette_1" src="img/pokemon_frame1.png" alt="malette_1">
+                            <img class="malette_2" src="img/pokemon_frame2.png" alt="malette_2">
                         </a>
                         
                     </div>
                     <div class="projet_text" id="projet_text_1">
                         <p class="projet_img">
-                            <img src="img/click.png"><br>
+                            <img src="img/click.png" alt="fleche_haut"><br>
                             <span>Vers Github</span>
                         </p>
                     </div>
@@ -160,13 +281,13 @@
                 <div id="projet_2" class="projets" data-aos="fade-left" data-aos-duration="1500">
                     <div class="pokeballs">
                         <a href="https://github.com/yoanndestras/site-ecommerce" target="_blank">
-                            <img class="pokeball" src="img/pokemon_frame1.png">
-                            <img class="pokeball2" src="img/pokemon_frame2.png">
+                            <img class="malette_1" src="img/pokemon_frame1.png" alt="malette_1">
+                            <img class="malette_2" src="img/pokemon_frame2.png" alt="malette_2">
                         </a>
                     </div>
                     <div class="projet_text" style="color: black;">
                         <p class="projet_img">
-                            <img src="img/click.png"><br>
+                            <img src="img/click.png" alt="fleche_haut"><br>
                             <span>Vers Github</span>
                         </p>
                     </div>
@@ -175,13 +296,13 @@
                 <div id="projet_3" class="projets" data-aos="fade-right" data-aos-duration="1500">
                     <div class="pokeballs">
                         <a href="https://github.com/yoanndestras/blog_bodybuilding" target="_blank">
-                            <img class="pokeball" src="img/pokemon_frame1.png">
-                            <img class="pokeball2" src="img/pokemon_frame2.png">
+                            <img class="malette_1" src="img/pokemon_frame1.png" alt="malette_1">
+                            <img class="malette_2" src="img/pokemon_frame2.png" alt="malette_2">
                         </a>
                     </div>
                     <div class="projet_text">
                         <p class="projet_img">
-                            <img src="img/click.png"><br>
+                            <img src="img/click.png" alt="fleche_haut"><br>
                             <span>Vers Github</span>
                         </p>
                     </div>
@@ -190,13 +311,13 @@
                 <div id="projet_4" class="projets" data-aos="fade-left" data-aos-duration="1500">
                     <div class="pokeballs">
                         <a href="https://yoanndestras.github.io/Reservia/" target="_blank">
-                            <img class="pokeball" src="img/pokemon_frame1.png">
-                            <img class="pokeball2" src="img/pokemon_frame2.png">
+                            <img class="malette_1" src="img/pokemon_frame1.png" alt="malette_1">
+                            <img class="malette_2" src="img/pokemon_frame2.png" alt="malette_2">
                         </a>
                     </div>
                     <div class="projet_text" style="color: black;">
                         <p class="projet_img">
-                            <img src="img/click.png"><br>
+                            <img src="img/click.png" alt="fleche_haut"><br>
                             <span>Vers Github</span>
                         </p>
                     </div>
@@ -205,12 +326,12 @@
         </section>
 
         <section id="section_contact">
-            <div id="div_titre_section"  data-aos="fade-up">
-                <h2 id="h2_img"><img src="img/arrow.PNG">Me contacter</h2>
+            <div class="div_titre_section"  data-aos="fade-up">
+                <h2 class="h2_img"><img src="img/arrow.PNG" alt="fleche">Me contacter</h2>
             </div>
             <article id="contact" data-aos="fade-up" data-aos-duration="1500">
                 <div id="send_mess">
-                    <p>Vous souhaitez me contacter ?<br> Je me tiens à votre disposition pour répondre ou préciser tout point de mon parcours/formation par téléphone/mail ou lors d’un entretien.</p>
+                    <p>Vous souhaitez me contacter ?<br> Je me tiens à votre disposition pour répondre ou préciser tout point de mon parcours / formation par téléphone / mail ou lors d’un entretien.</p>
                     <form method="POST" id="form_mail" >
                         <div class="champ">
                             <label for="name">Nom / Prénom</label>
@@ -234,10 +355,11 @@
                         </div>
                     </form>
                     <div id='email_verif'></div>
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2529.3820718368743!2d3.039366915634462!3d50.65716627950439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c32a8d8f0672ed%3A0xa28d208faf579c55!2s41%20Avenue%20de%20Verdun%2C%2059350%20Saint-Andr%C3%A9-lez-Lille%2C%20France!5e0!3m2!1sfr!2sbe!4v1626351333413!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
-                <div id="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2529.3820718368743!2d3.039366915634462!3d50.65716627950439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c32a8d8f0672ed%3A0xa28d208faf579c55!2s41%20Avenue%20de%20Verdun%2C%2059350%20Saint-Andr%C3%A9-lez-Lille%2C%20France!5e0!3m2!1sfr!2sbe!4v1626351333413!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
+                
             </article>
         </section>
   	</main>
@@ -255,6 +377,13 @@
                 </li>
             </ul>
         </div>
+        <div>
+            <ul id="copyright">
+                <li>
+                    Copyright © 2021. Tous droits réservés <a href="#" >ydestras</a>
+                </li>
+            </ul>
+        </div>
     </footer>
 </body>
 
@@ -262,9 +391,15 @@
 
 <script src="js/ajax.js"></script>
 <script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init();
+    AOS.init({disable: 'mobile'});
 </script>
 
 </html>

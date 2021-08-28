@@ -23,10 +23,6 @@ header
 
 /*******************************************LOGO NAME**************************************************/
 
-#logo_and_name
-{
-    width: 25%;
-}
 #img_male
 {
     width: 15px;
@@ -47,30 +43,26 @@ header
 {
     margin: 0;;
 }
-h2
-{
-    color: white;
-    font-size: 3em;
-}
-#logo_y
+.logo_y
 {
     width: 40%;
 }
-#logo_and_name 
+#logo_and_name, #logo_and_name_responsive
 {
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end
 }
-#logo_and_name div
+#logo_and_name div, #logo_and_name_responsive div
 {
     width: 250px;
 }
 
 /*******************************************NAVBAR**************************************************/
 
-nav ol
+#pc_navbar nav ol
 {
     list-style: none;
     display: flex;
@@ -78,14 +70,14 @@ nav ol
     justify-content: space-around;
 
 }
-nav ol a
+#pc_navbar nav ol a
 {
     text-decoration: none;
     color: #506860;
     height: 0px;
 }
 
-.link
+#pc_navbar .link
 {
     background-color: #F8F8F8;
     padding: 10px 5px 10px 5px;
@@ -95,17 +87,17 @@ nav ol a
     -webkit-box-shadow: 0px 0px 0px 2px #000000; 
     box-shadow: 0px 0px 0px 2px #000000;
 }
-.link img
+#pc_navbar .link img
 {
     width: 15px;
     height: auto;
-    margin-bottom: -3px;
+    margin-top: -3px;
     margin-right: 2px;
 }
-#h2_img img
+.h2_img img
 {
     width: 50px;
-    margin-bottom: -10px;
+    margin-top: -5px;
     margin-right: 10px;
 }
 #img_comp, #img_real, #img_contact
@@ -125,6 +117,31 @@ nav ol a
     visibility: visible;
 }
 
+
+#cv_download
+{
+    background-color: #F8F8F8;
+    font-size: 1.2em;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 10px 5px 10px 5px;
+    border: solid 5px #D8BE9D;
+    -webkit-box-shadow: 0px 0px 0px 2px #000000; 
+    box-shadow: 0px 0px 0px 2px #000000;
+}
+#cv_download:hover
+{
+    border: solid 5px #000000;
+    background-color: #D8BE9D;
+
+    -webkit-box-shadow: 0px 0px 0px 2px #F8F8F8; 
+    box-shadow: 0px 0px 0px 2px #F8F8F8;
+}
+.fa-file-download
+{
+    font-size: 1.5em;
+}
+
 /*******************************************MAIN**************************************************/
 
 main
@@ -140,6 +157,7 @@ main
 {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-bottom: 100px;
 
     font-size: 1.1em;
@@ -196,6 +214,8 @@ h2
     margin: 0 auto;
     -webkit-box-shadow: 0px 0px 0px 2px #000000; 
     box-shadow: 0px 0px 0px 2px #000000;
+    color: white;
+    font-size: 3em;
 }
 
 .comp, .projets
@@ -226,13 +246,15 @@ h2
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+    height: 100%;
 }
 #comp_bulle
 {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 200%;
 
     color: #E0D8E0;
     background-color: #285068;
@@ -243,6 +265,12 @@ h2
     flex-direction: row;
     justify-content: space-around;
 
+}
+#comp_bulle img
+{
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 #comp_bulle::after
 {
@@ -274,6 +302,12 @@ h2
     display: flex;    
     justify-content: flex-end;
 }
+.progress_bar_text
+{
+    font-size: 0.7em;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
 .progress_bar p:first-child
 {
     margin: 0;
@@ -299,8 +333,12 @@ h2
 {
     width: 100%;
     font-size: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-.myProgress_1, .myProgress_2, .myProgress_3, .myProgress_4, .myProgress_5, .myProgress_6, .myProgress_7, .myProgress_8
+.myProgress
 {
     width: 70%;
     height: 30px;
@@ -308,7 +346,7 @@ h2
     margin-right: 15px;
 }
   
-.myBar_1, .myBar_2, .myBar_3, .myBar_4, .myBar_5, .myBar_6, .myBar_7, .myBar_8
+.myBar
 {
     width: 1%;
     height: 30px;
@@ -328,10 +366,19 @@ h2
     background-color: #D8BE9D;
     color: #506860;
 }
+.click_simulate
+{
+    background-color: #D8BE9D;
+    color: #506860;
+}
 #tabs
 {
     display: flex;
     justify-content: space-evenly;
+}
+.chiffres_affiche
+{
+    display: none;
 }
 /*******************************************MAIN REAL**************************************************/
 
@@ -395,9 +442,13 @@ h2
     top: 50%;
     width: 100%;
 }
-#section_real, #section_comp
+#section_comp
 {
-    margin-bottom: 120px;
+    margin-bottom: 340px;
+}
+.br
+{
+    display: none;
 }
 #section_comp article, #section_real article
 {
@@ -406,7 +457,7 @@ h2
     flex-wrap: wrap;
     justify-content: space-around;
 }
-#h2_img
+.h2_img
 {
     background-color: #F8F8F8;
     color: #565750;
@@ -415,17 +466,10 @@ h2
     margin-top: 50px;
     margin-bottom: 50px;
 }
-#div_titre_section
+.div_titre_section
 {
     width: 100%;
     display: flex;
-}
-#cv_download
-{
-    background: rgb(39,137,225);
-    background: linear-gradient(180deg, rgba(39,137,225,1) 50%, rgba(1,48,189,1) 59%);
-    color: #F6F8FA;
-    border-radius: 10px;
 }
 .second_column
 {
@@ -464,7 +508,7 @@ h2
     opacity: 1;
     top: 30%;
 }
-.pokeball, .pokeball2
+.malette_1, .malette_2
 {
     position: absolute;
     margin-left: auto;
@@ -490,9 +534,13 @@ h2
 #send_mess
 {
     position: relative;
-    width: 100%;
     height: 100%;
 
+    text-align: center;
+    width: 70%;
+    padding: 20px;
+
+    margin: 0 auto;
     color: #E0D8E0;
     background-color: #285068;
     border: solid 5px #E0D8E0;
@@ -525,19 +573,12 @@ h2
 #map iframe
 {
     height: 100%;
-}
-#send_mess
-{
-    text-align: center;
-    width: 50%;
-    padding: 20px;
-    
+    width: 100%;
 }
 #send_mess p
 {
     font-size: 1.2em;
     line-height: 150%;
-    
 }
 #send_mess form
 {
@@ -547,6 +588,8 @@ h2
 {
     display: inline-block;
     width: 30% ;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .champ
 {
@@ -586,18 +629,280 @@ footer ul
     padding-top: 25px;
     margin: 0;
 
-    background-color: #285068;
+    
     color: white;
-
+    background-color: #82A2AD;
     list-style: none;
 
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-footer
+#copyright
 {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    font-size: 0.8em;
+    background-color: #285068;
+}
+@media screen and (max-width: 1500px)
+{
+    #comp_bulle
+    {
+        height: 250%;
+    }
+    #section_real
+    {
+        margin-top: 80px;
+    }
+    #comps
+    {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width: 1254px)
+{
+    #comp_bulle img
+    {
+        display: none;
+    }
+    #description img
+    {
+        width: 30%;
+    }
+    
+}
+@media screen and (max-width: 1050px)
+{
+    #avatar_responsive
+    {
+        width: 50%;
+    }
+    #responsive_navbar
+    {
+        display: block !important;
+        position:  relative !important;
+        background-color: #285068;
+        color: #E0D8E0 !important;
+        
+    }
+    .navbar-brand, .nav-link
+    {
+        color: #E0D8E0 !important;
+    }
+    #pc_navbar
+    {
+        display: none;
+    }
+    #logo_and_name_responsive
+    {
+        display: block !important;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    #logo_and_name_responsive div
+    {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #description img
+    {
+        display: none;
+    }
+    #description div
+    {
+        width: 100%;
+        height: 100%;
+    }
+    h2
+    {
+        font-size: 2em;
+    }
+    .h2_img img
+    {
+        width: 25px;
+        margin-bottom: 0px;
+    }
+    #h2_real
+    {
+        margin-top: 150px;
+    }
+    
+}
+@media screen and (max-width: 1024px)
+{
+    body
+    {
+        background-attachment:unset;
+        background-image: url(../img/fondrepetitifpixel.png);
+        background-size: contain;
+        background-repeat: repeat;
+        background-position: top center;
+    }
+}
+@media screen and (max-width: 900px)
+{
+    
+    #section_real article
+    {
+        flex-direction: column;
+    }
+    .end
+    {
+        display: none;
+    }
+    .projets
+    {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .progress_bar p:first-child
+    {
+        width: 100%;
+    }
+    #comp_une, #comp_deux, #comp_trois
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .progress_bar p:last-child
+    {
+        margin-right: 15px;
+    }
+    .champ
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .champ label
+    {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 700px)
+{
+    .progress_bar
+    {
+        flex-direction: column;
+    }
+    .chiffres
+    {
+        display: none;
+    }
+    .chiffres_affiche
+    {
+        display: block;
+    }
+    .tab_button
+    {
+        margin: 10px
+    }
+    #comp_bulle
+    {
+        height: 340%;
+    }
+    #h2_real
+    {
+        margin-top: 350px;
+    }
+    h2
+    {
+        font-size: 1.5em;
+    }
+    .champ input, .champ textarea
+    {
+        width: 100%;
+    }
+    #send_mess p
+    {
+        font-size: 0.9em;
+    }
+    footer
+    {
+        font-size: 0.8em;
+    }
+    .div_titre_section
+    {
+        position: relative;
+        z-index: -2;
+    }
+}
+@media screen and (max-width: 550px)
+{
+    
+    main
+    {
+        margin-top: 0px;
+    }
+    #mon_portfolio_title
+    {
+        font-size: 1.2em;
+    }
+    #logo_and_name div, #logo_and_name_responsive div
+    {
+        width: 150px;
+    }
+    h2
+    {
+        font-size: 1em;
+    }
+    #header_name p
+    {
+        font-size: 0.6em;
+    }
+    #comp_bulle
+    {
+        height: 400%;
+    }
+    #comps
+    {
+        margin-right: 50px;
+        margin-left: 30px;
+    }
+    #tabs
+    {
+        padding-left: 30px;
+    }
+    .comp
+    {
+        width: 100%;
+    }
+    .progress_bar_text
+    {
+        font-size: 0.6em;
+    }
+    #description_p
+    {
+        font-size: 0.8em;
+    }
+    #send_mess
+    {
+        width: 100%;
+    }
+    #h2_real
+    {
+        margin-top: 500px;
+    }
+    .malette_1, .malette_2
+    {
+        width: 35%;
+    }
+    #fleches
+    {
+        display: none;
+    }
+    footer
+    {
+        font-size: 0.6em;
+        position: relative;
+    }
+    footer ul
+    {
+        flex-direction: column;
+    }
+
 }

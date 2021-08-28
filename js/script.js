@@ -44,17 +44,17 @@ $(document).ready(function()
 
   let projets = document.querySelectorAll(".projets");
   let click = document.querySelectorAll(".projet_text");
-  let pokeball1 = document.querySelectorAll(".pokeball");
-  let pokeball2 = document.querySelectorAll(".pokeball2");
+  let malette_1 = document.querySelectorAll(".malette_1");
+  let malette_2 = document.querySelectorAll(".malette_2");
   
   for(let i=0 ; i<click.length; i++)
   {
     click[i].classList.add("opacity_0");
   }
 
-  for(let i=0 ; i<pokeball2.length; i++)
+  for(let i=0 ; i<malette_2.length; i++)
   {
-    pokeball2[i].style.display = "none";
+    malette_2[i].style.display = "none";
   }
 
   for(let i=0 ; i<click.length; i++)
@@ -62,22 +62,21 @@ $(document).ready(function()
     for(let i=0; i<projets.length; i++){
       projets[i].addEventListener("mouseenter", function(){
         click[i].classList.add("opacity_1");
-        pokeball1[i].style.display = "none";
-        pokeball2[i].style.display = "block";
+        malette_1[i].style.display = "none";
+        malette_2[i].style.display = "block";
       });
      }
      for(let i=0; i<projets.length; i++){
       projets[i].addEventListener("mouseleave", function(){
         click[i].classList.remove("opacity_1");
-        pokeball1[i].style.display = "block";
-        pokeball2[i].style.display = "none";
+        malette_1[i].style.display = "block";
+        malette_2[i].style.display = "none";
       });
      }
   }
 
 
 let i = 0;
-move();
 
 function move() 
 {
@@ -86,56 +85,50 @@ function move()
 
     i = 1;
 
-    let myBar_1 = document.querySelector(".myBar_1");
-    let myBar_2 = document.querySelector(".myBar_2");
-    let myBar_3 = document.querySelector(".myBar_3");
-    let myBar_4 = document.querySelector(".myBar_4");
-    let myBar_5 = document.querySelector(".myBar_5");
-    let myBar_6 = document.querySelector(".myBar_6");
-    let myBar_7 = document.querySelector(".myBar_7");
-    let myBar_8 = document.querySelector(".myBar_8");
+    let myBar = document.querySelectorAll(".myBar");
 
     let width = 1;
 
-    let id_1 = setInterval(frame90, 20);
-    let id_2 = setInterval(frame80, 20);
-    let id_3 = setInterval(frame70, 20);
-    let id_4 = setInterval(frame60, 20);
-    let id_5 = setInterval(frame50, 20);
-    let id_8 = setInterval(frame20, 20);
+    //let id_90 = setInterval(frame90, 20);
+    let id_80 = setInterval(frame80, 20);
+    let id_70 = setInterval(frame70, 20);
+    let id_60 = setInterval(frame60, 20);
+    let id_50 = setInterval(frame50, 20);
+    let id_40 = setInterval(frame40, 20);
+    let id_20 = setInterval(frame20, 20);
 
-    function frame90()
+    /*function frame90()
     {
       if (width >= 90)
       {
-        clearInterval(id_1);
+        clearInterval(id_90);
         i = 0;
       }
       else
       {
         width++;
       }
-    }
+    }*/
 
     function frame80()
     {
       if (width >= 80)
       {
-        clearInterval(id_2);
+        clearInterval(id_80);
         i = 0;
       }
       else
       {
         width++;
-        myBar_1.style.width = width + "%"; // HTML
+        myBar[0].style.width = width + "%"; // HTML
       }
     }
 
     function frame70()
     {
-      if (width >= 70)
+      if (width >= 75)
       {
-        clearInterval(id_3);
+        clearInterval(id_70);
         i = 0;
       }
       else
@@ -148,16 +141,16 @@ function move()
     {
       if (width >= 60)
       {
-        clearInterval(id_4);
+        clearInterval(id_60);
         i = 0;
       }
       else
       {
         width++;
-        myBar_2.style.width = width + "%"; // CSS
-        myBar_3.style.width = width + "%"; // JS
-        myBar_4.style.width = width + "%"; // PHP
-        myBar_6.style.width = width + "%"; // BOOTSTRAP
+        myBar[1].style.width = width + "%"; // CSS
+        myBar[2].style.width = width + "%"; // JS
+        myBar[3].style.width = width + "%"; // PHP
+        myBar[6].style.width = width + "%"; // BOOTSTRAP
       }
     }
 
@@ -165,14 +158,29 @@ function move()
     {
       if (width >= 50)
       {
-        clearInterval(id_5);
+        clearInterval(id_50);
         i = 0;
       }
       else
       {
         width++;
-        myBar_5.style.width = width + "%"; // SQL
-        myBar_7.style.width = width + "%"; // JQUERY
+        myBar[4].style.width = width + "%"; // SQL
+        myBar[7].style.width = width + "%"; // JQUERY
+      }
+    }
+
+    function frame40()
+    {
+      if (width >= 40)
+      {
+        clearInterval(id_40);
+        i = 0;
+      }
+      else
+      {
+        width++;
+        myBar[5].style.width = width + "%"; // AJAX
+        myBar[8].style.width = width + "%"; // SYMFONY
       }
     }
 
@@ -180,41 +188,115 @@ function move()
     {
       if (width >= 20)
       {
-        clearInterval(id_8);
+        clearInterval(id_20);
         i = 0;
       }
       else
       {
         width++;
-        myBar_8.style.width = width + "%"; // SYMFONY
+       
       }
     }
   }
 }
+let timerID;
 
 $("#comp_deux").hide();
 $("#comp_trois").hide();
 
-    $("#tab_one").click(function()
-    {
-        $("#comp_une").show();
-        $("#comp_deux").hide();
-        $("#comp_trois").hide();
-    });
+$("#tab_one").click(function()
+{
+  move();
+  clearInterval(timerID);
+  $("#comp_une").show();
+  $("#comp_deux").hide();
+  $("#comp_trois").hide();
 
-    $("#tab_two").click(function()
-    {
-        $("#comp_une").hide();
-        $("#comp_deux").show();
-        $("#comp_trois").hide();
-    });
-
-    $("#tab_three").click(function()
-    {
-        $("#comp_une").hide();
-        $("#comp_deux").hide();
-        $("#comp_trois").show();
-    });
-
+  $("#tab_one").addClass("click_simulate");
+  $("#tab_two").removeClass("click_simulate");
+  $("#tab_three").removeClass("click_simulate");
+  j = 1;
+  timerID = setInterval(increment, 300000); 
 });
 
+$("#tab_two").click(function()
+{
+  move();
+  clearInterval(timerID);
+  $("#comp_une").hide();
+  $("#comp_deux").show();
+  $("#comp_trois").hide();
+
+  $("#tab_one").removeClass("click_simulate");
+  $("#tab_two").addClass("click_simulate");
+  $("#tab_three").removeClass("click_simulate");
+  j = 2;
+  timerID = setInterval(increment, 300000); 
+});
+
+$("#tab_three").click(function()
+{
+  move();
+  clearInterval(timerID);
+  $("#comp_une").hide();
+  $("#comp_deux").hide();
+  $("#comp_trois").show();
+
+  $("#tab_one").removeClass("click_simulate");
+  $("#tab_two").removeClass("click_simulate");
+  $("#tab_three").addClass("click_simulate");
+  j = 0;
+  timerID = setInterval(increment, 300000); 
+});
+
+
+tab_list = document.querySelectorAll('.tab_button');
+let j = 0;
+
+increment();
+
+function increment() 
+  {
+    if(j == 2)
+    {
+      move();
+      $("#comp_une").hide();
+      $("#comp_deux").hide();
+      $("#comp_trois").show();
+      tab_list[j-1].classList.remove("click_simulate");
+      tab_list[j].classList.add("click_simulate");
+      j = 0;
+      
+      
+    }
+    else if(j == 0)
+    {
+      move();
+      $("#comp_une").show();
+      $("#comp_deux").hide();
+      $("#comp_trois").hide();
+      tab_list[j].classList.add("click_simulate");
+      tab_list[tab_list.length-1].classList.remove("click_simulate");
+      j++;
+    }
+    else
+    {
+      move();
+      $("#comp_une").hide();
+      $("#comp_deux").show();
+      $("#comp_trois").hide();
+      tab_list[j-1].classList.remove("click_simulate");
+      tab_list[j].classList.add("click_simulate");
+      j++;
+    }
+  }
+
+timerID = setInterval(increment, 5000); 
+
+
+/*$(document).on("click", tab_list[j], function (event) 
+{
+  
+});*/
+
+});
